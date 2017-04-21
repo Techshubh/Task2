@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.task2.task2.RegisterBuy">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="280dp"
+
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="#F5F5F5"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="55dp"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:drawablePadding="20dp"/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+
+        android:layout_alignStart="@+id/editText"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="10dp"
+        android:background="#F5F5F5"
+        android:ems="10"
+        android:hint="Email address"
+        android:inputType="textEmailAddress"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:drawablePadding="20dp"/>
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+
+        android:layout_alignStart="@+id/editText2"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="10dp"
+        android:background="#F5F5F5"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="Create Password"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
+        android:drawablePadding="20dp"/>
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+
+        android:layout_alignStart="@+id/editText3"
+        android:layout_below="@+id/editText3"
+        android:layout_marginTop="10dp"
+        android:background="#F5F5F5"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:drawablePadding="20dp"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"/>
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="280dp"
+
+        android:layout_height="40dp"
+        android:background="#F5F5F5"
+        android:ems="10"
+        android:hint="Your City"
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        android:drawableLeft="@drawable/ic_place_black_24dp"
+        android:drawablePadding="20dp"
+        android:layout_below="@+id/editText4"
+        android:layout_alignStart="@+id/editText4" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+
+        android:layout_alignStart="@+id/editText5"
+        android:layout_below="@+id/editText5"
+        android:layout_marginTop="10dp"
+        android:background="#F5F5F5"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:drawablePadding="20dp"
+        android:inputType="textPersonName|phone"
+        android:drawableLeft="@drawable/ic_phone_black_24dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/editText6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/round"
+        android:elevation="0dp"
+        android:onClick="otp"
+        android:text="REGISTER NOW"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Loginname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="REGISTER  AS BUYER"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/button"
+        android:layout_below="@+id/button"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Already have an account?"
+        android:textColor="#424242" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_marginStart="2dp"
+        android:layout_toEndOf="@+id/textView3"
+        android:text="Sign in now"
+        android:textColor="?attr/actionModeSplitBackground"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:onClick="SignB"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editText6"
+        android:layout_below="@+id/editText6"
+        android:text="You will recieve OTP code on this number"
+        android:textColor="#424242"/>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Loginname"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/text" />
+
+</RelativeLayout>
