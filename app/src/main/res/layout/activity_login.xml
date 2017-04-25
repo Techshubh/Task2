@@ -109,25 +109,14 @@
         android:textStyle="bold" />
 
 
-    <com.facebook.login.widget.LoginButton
-
-        android:id="@+id/login_button"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-
-        android:layout_alignEnd="@+id/textView5"
-        android:layout_below="@+id/textView8"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/round1" />
-
     <Button
         android:id="@+id/bn_login"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/login_button"
+        android:layout_alignTop="@+id/FrameLayout1"
         android:layout_marginLeft="15dp"
-        android:layout_marginStart="17dp"
-        android:layout_toEndOf="@+id/login_button"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/textView5"
         android:background="@drawable/round2"
         android:drawableLeft="@drawable/ic_google"
         android:paddingLeft="20dp"
@@ -148,6 +137,7 @@
         android:textSize="18sp" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bn_login"
@@ -177,6 +167,39 @@
 
 
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/FrameLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView8"
+        android:layout_marginTop="14dp"
+        android:layout_toStartOf="@+id/textView5">
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/fb"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayout"
+            android:layout_toStartOf="@+id/textView5"
+            android:background="@drawable/round1"
+            android:drawableLeft="@drawable/ic_facebook_logo_png_23"
+            android:onClick="onClick1"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:text="Facebook"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+
+    </FrameLayout>
 
 
 </RelativeLayout>

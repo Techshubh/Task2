@@ -30,7 +30,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
     private TextView t;
     private String id;
     private LoginButton login_button;
-    private Button Signin;
+    private Button Signin, fb;
     private Button Signout;
     private GoogleApiClient googleApiClient;
 
@@ -62,6 +62,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
         Signin = (Button) findViewById(R.id.bn_login);
 
         Signin.setOnClickListener(this);
+        fb = (Button) findViewById(R.id.fb);
 
         GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this, this).addApi(Auth.GOOGLE_SIGN_IN_API, signInOptions).build();
@@ -121,8 +122,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
     public void controls(){
 
         callbackManager=CallbackManager.Factory.create();
-        login_button=(LoginButton)findViewById(R.id.login_button);
+        login_button = (LoginButton) findViewById(R.id.login_button1);
 
+    }
+
+    public void onClick1(View v) {
+        if (v == fb) {
+            login_button.performClick();
+        }
     }
 
     private void loginWithfb()
